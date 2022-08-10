@@ -71,7 +71,7 @@ if($article == null)
         $form->handleRequest($superglobals);
 
 
-        dump($article);
+       ;
 
         if($form->isSubmitted() && $form->isValid())
         {

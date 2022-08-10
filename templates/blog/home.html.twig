@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<p>Bonjour à tous</p>
+<p>Voici la page d'accueil</p>
+
+{# affichage de la variable title déclarée dans le controller #}
+{{title}}
+
+{% if age >= 18%}
+<P>Tu es majour </P>
+{% else %}
+<p>Tu es mineur</p>
+{% endif %}
+
+{% set city = 'paris' %}
+{# set permet de créer une variable #}
+
+{{city}}
+
+{% if city starts with 'p' %}
+<p>{{ city}} commence par un P</p>
+{% endif %}
+
+{% if city ends with 'F' %}
+<p>{{ city }} finit par un F</p>
+{% else %}
+<p>{{ city }} ne finit pas par un F</p>
+{% endif %}
+
+{% endblock %}
